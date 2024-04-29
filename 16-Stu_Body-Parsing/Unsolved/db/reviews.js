@@ -14,7 +14,7 @@ const reviews = [
       'Love it! They typing feel is amazing but it lacks dedicated arrow keys',
     rating: 8,
     upvotes: 20,
-    review_id: uuid(),
+    review_id: 3345,
   },
   {
     product: 'Apple Wireless Keyboard',
@@ -25,7 +25,7 @@ const reviews = [
       'It works for what I need it for, but the travel distance is almost non-existent',
     rating: 6,
     upvotes: 20,
-    review_id: uuid(),
+    review_id: 7656,
   },
   {
     product: 'Ducky One Two Mini',
@@ -36,7 +36,7 @@ const reviews = [
       'Great 60% keyboard with amazing build quality. Nice bang for your buck',
     rating: 9,
     upvotes: 20,
-    review_id: uuid(),
+    review_id: 4456,
   },
   {
     product: 'Dell USB keyboard',
@@ -46,7 +46,7 @@ const reviews = [
     review: 'This thing is terrible. It came with my PC and it is not great',
     rating: 2,
     upvotes: 20,
-    review_id: uuid(),
+    review_id: 8890,
   },
 ];
 
