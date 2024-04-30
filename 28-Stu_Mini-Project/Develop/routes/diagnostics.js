@@ -11,7 +11,25 @@ diagnostics.get('/', (req, res) => {
 // POST Route for a error logging
 diagnostics.post('/', (req, res) => {
   // TODO: Logic for appending data to the db/diagnostics.json file
-  readAndAppend(req.body, './db/diagnostics.json');
+  console.log(req.body);
+
+  const { isValid, errors } = req.body;
+
+  const payload = {
+    time: Date.now(),
+    error_id: uuidv4(),
+    errors,
+  };
+
+  if (isValid) {
+    readAndAppend(payload, './db/diagnostics.json');
+    res.json('Diagnostic information added successfully');
+  } else {
+    res.json({
+      message: 'Error in adding diagnostic information',
+      error_id: payload.error_id,
+    })
+  }
 });
 
 module.exports = diagnostics;
